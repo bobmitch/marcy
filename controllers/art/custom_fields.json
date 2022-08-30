@@ -2,7 +2,7 @@
 		{
 			"title":"Art",
 			"id":"art",
-			"list":["artthumbnail"],
+			"list":["artthumbnail","artlocation"],
 			"fields":[
 				{
 					"name":"artthumbnail",
@@ -45,19 +45,15 @@
 					]
 				},
 				{
-					"type":"Select",
+					"type":"Contentselector",
+					"content_type":3,
+					"multiple":false,
 					"id":"artlocation",
 					"name":"artlocation",
 					"required":true, 
 					"label":"Location",
-					"description":"CHANGE TO CONTENT LOOKUP FOR NEW LOCATION TYPE",
-					"default":"studio",
-						"filter":"STRING",
-						"placeholder":"Please select",
-					"select_options":[
-						{"text":"Studio","value":"Studio"},
-						{"text":"Gallery","value":"Gallery"}
-					]
+					"description":"Select where this work is currently available to view/purchase. (Some locations may be unlisted, and nothing will be shown)",
+					"default":5
 				},
 				{
 					"type":"Select",
@@ -65,7 +61,7 @@
 					"name":"artstatus",
 					"required":true, 
 					"label":"Status",
-					"default":"available",
+					"default":"Available",
 						"filter":"STRING",
 						"placeholder":"Please select",
 					"select_options":[
