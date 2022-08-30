@@ -2,11 +2,12 @@
 		{
 			"title":"Art",
 			"id":"art",
+			"list":["artthumbnail"],
 			"fields":[
 				{
 					"name":"artthumbnail",
 					"id":"artthumbnail",
-					"type":"UserImage",
+					"type":"Image",
 					"label":"Image",
 					"required":false,
 					"default":0
