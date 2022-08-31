@@ -4,6 +4,7 @@
 .hero_wrap {
     background-size:cover;
     background-position:center;
+    height:60vh;
 }
 .hero_wrap * {
     text-shadow:0 0 0.5em black;
@@ -15,6 +16,7 @@ img {
     max-width:100%;
 }
 nav {
+    margin-top:2rem;
     margin-bottom:2rem;
 }
 nav ul {
