@@ -1,0 +1,13 @@
+.blog_tag_list_wrap {
+    display:none;
+}
+.hero_wrap {
+    background-size:cover;
+    background-position:center;
+}
+.hero_wrap * {
+    text-shadow:0 0 0.5em black;
+}
+.hero_content {
+    padding:2rem;
+}

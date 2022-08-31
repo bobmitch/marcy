@@ -1,0 +1,48 @@
+{
+	"title":"Hero",
+	"location":"hero",
+	"id":"widget_hero_options",
+	"fields":[
+		{
+			"name":"heading",
+			"id":"heading",
+			"type":"Text",
+			"label":"Heading",
+			"required":true	
+		},
+		{
+			"name":"markup",
+			"id":"markup",
+			"type":"Rich",
+			"label":"Content",
+			"required":true,
+			"minlength":3,
+			"filter":"RAW"
+		},
+		{
+			"name":"image",
+			"id":"image",
+			"type":"Image",
+			"label":"Background Image",
+			"required":true	
+		}
+		,
+		{
+			"name":"cta",
+			"id":"cta",
+			"type":"Text",
+			"label":"Button Text",
+			"required":false,
+			"description":"If you leave this empty, no button will be shown on front-end, only the content above."
+		}
+		,
+		{
+			"name":"url",
+			"id":"url",
+			"type":"Text",
+			"label":"Button URL",
+			"required":false,
+			"description":"This will only be used if the Button Text field above is also completed."
+		}
+	]
+}
