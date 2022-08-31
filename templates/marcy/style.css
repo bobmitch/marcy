@@ -11,3 +11,33 @@
 .hero_content {
     padding:2rem;
 }
+img {
+    max-width:100%;
+}
+nav {
+    margin-bottom:2rem;
+}
+nav ul {
+    width: 100%;
+    justify-content: flex-end;
+}
+nav li.page.home {
+    margin-right: auto;
+}
+nav li {
+    transition:all 0.3s ease;
+    border-bottom:2px solid transparent;
+}
+nav li:hover {
+    border-bottom:2px solid var(--primary-hover);
+}
+nav li.current {
+    border-bottom:2px solid var(--primary);
+}
+a.page_id_1 {
+    text-indent: -999px;
+    background-image: url(/image/3);
+    background-size: contain;
+    width: 20rem;
+    background-position: center;
+}
