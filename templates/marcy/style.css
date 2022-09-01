@@ -89,6 +89,6 @@ footer p {
     font-size:0.6em;
     font-weight:900;
 }
-.artdesc p:last-of-type {
+:is(.artdesc, article) p:last-of-type {
     margin-bottom:0;
 }

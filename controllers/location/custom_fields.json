@@ -16,8 +16,17 @@
 					"type":"Text",
 					"id":"locationcity",
 					"name":"locationcity",
-					"required":false, 
+					"required":true, 
 					"label":"City",
+					"filter":"STRING"
+				},
+				{
+					"type":"Text",
+					"id":"locationstate",
+					"name":"locationstate",
+					"required":true, 
+					"label":"State",
+					"default":"MI",
 					"filter":"STRING"
 				},
 				{
