@@ -5,6 +5,38 @@
 			"list":["listlocation"],
 			"fields":[
 				{
+					"type":"Text",
+					"id":"locationaddress",
+					"name":"locationaddress",
+					"required":false, 
+					"label":"Address",
+					"filter":"STRING"
+				},
+				{
+					"type":"Text",
+					"id":"locationcity",
+					"name":"locationcity",
+					"required":false, 
+					"label":"City",
+					"filter":"STRING"
+				},
+				{
+					"type":"Text",
+					"id":"locationweb",
+					"name":"locationweb",
+					"required":false, 
+					"label":"Website",
+					"filter":"URL"
+				},
+				{
+					"type":"Rich",
+					"id":"locationdesc",
+					"name":"locationdesc",
+					"required":false, 
+					"label":"Description",
+					"filter":"RAW"
+				},
+				{
 					"type":"Checkbox",
 					"id":"listlocation",
 					"name":"listlocation",
