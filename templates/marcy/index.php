@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" >
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,9 +31,13 @@
 
 	<?php CMS::Instance()->render_widgets('After Content');?>
 	
-	<footer class='container'>
+	<footer data-theme="dark">
+		<div class='container'>
+			<p>All content copyright &copy;2022 - Marcy Mitchell. All rights reserved.</p>
+		</div>
 		<?php CMS::Instance()->render_widgets('Footer');?>
 	</footer>
+
 	<?php if (Config::$debug) { CMS::Instance()->showinfo();} ?>
 </body>
 </html>
