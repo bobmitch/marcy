@@ -10,3 +10,5 @@ $art = Content::get_all_content_for_id($art_id);
 
 $image_id = $art->f_artthumbnail;
 $image = new Image($image_id);
+
+$grid_images = json_decode($art->f_artimages);
