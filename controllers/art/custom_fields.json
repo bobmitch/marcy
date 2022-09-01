@@ -69,6 +69,25 @@
 						{"text":"Sold","value":"Sold"},
 						{"text":"In Progress","value":"In Progress"}
 					]
+				},
+				{
+					"type":"Text",
+					"filter":"INT",
+					"id":"price",
+					"name":"price",
+					"default":0,
+					"required":false,
+					"label":"Price",
+					"description":"Will be shown in dollars. No cents please - whole numbers only!"
+				},
+				{
+					"name":"artimages",
+					"id":"artimages",
+					"type":"Repeatable",
+					"label":"Other Images",
+					"required":false,
+					"form_path":"/controllers/art/artimages.json",
+					"description":"Include any other images of this work here for a mini gallery!"
 				}
 			]
 		}

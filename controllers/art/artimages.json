@@ -1,0 +1,12 @@
+{
+	"title":"Art Images",
+	"fields":[
+		{
+            "type":"Image",
+            "id":"artimage",
+            "name":"artimage",
+            "required":true, 
+            "label":"Art Image"
+        }
+	]
+}
