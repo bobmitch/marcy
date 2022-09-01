@@ -43,3 +43,13 @@ a.page_id_1 {
     width: 20rem;
     background-position: center;
 }
+.artgrid_wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+.artgrid_image {
+    display:block;
+    object-fit: cover;
+    aspect-ratio:1/1;
+}

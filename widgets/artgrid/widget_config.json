@@ -1,0 +1,16 @@
+{
+	"title":"ArtGrid",
+	"location":"artgrid",
+	"id":"widget_artgrid_options",
+	"fields":[
+		{
+			"name":"arts",
+			"id":"arts",
+			"type":"Repeatable",
+			"label":"Art To Show",
+			"required":false,
+			"form_path":"/widgets/artgrid/artgrid.json",
+			"description":"Select and order the art to show in this grid. We show 8 items in a grid, so if you don't select 8, we'll choose random art to fill up the rest!"
+		}
+	]
+}

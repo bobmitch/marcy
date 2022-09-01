@@ -1,0 +1,15 @@
+{
+	"title":"ArtGrid Arts",
+	"fields":[
+		{
+            "type":"Contentselector",
+            "content_type":2,
+            "multiple":false,
+            "id":"art",
+            "name":"art",
+            "required":true, 
+            "label":"Art Piece",
+            "default":5
+        }
+	]
+}
