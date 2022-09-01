@@ -14,14 +14,16 @@ defined('CMSPATH') or die; // prevent unauthorized access
                 <div class='artinfo_item'>
                     <label>Address</label>
                     <p>
-                        <?=$location->f_locationaddress;?><br>
+                        <?php if ($location->f_locationaddress):?>
+                            <?=$location->f_locationaddress;?><br>
+                        <?php endif; ?>
                         <?=$location->f_locationcity;?>, <?=$location->f_locationstate;?>
                     </p>
                 </div>
                 <?php if ($location->f_locationweb):?>
                     <div class='artinfo_item'>
                         <label>Website</label>
-                        <p><?=$location->f_locationweb;?></p>
+                        <p><a target='_blank' href='<?=$location->f_locationweb;?>'><?=$location->f_locationweb;?></a></p>
                     </div>
                 <?php endif; ?>
             </div>
