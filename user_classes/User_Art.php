@@ -16,4 +16,16 @@ class User_Art {
 		</div>
 		<?php
 	}
+
+	public static function render_location_name($id) {
+		// get location
+		// if 'listlocation' is true, then wrap in link, otherwise just return name
+		$location = Content::get_all_content_for_id($id);
+		if ($location->f_listlocation) {
+			echo "<a href='" . Config::$uripath . "/galleries/" . $location->alias . "'>" . $location->title . "</a>";
+		}
+		else {
+			echo $location->title;
+		}
+	}
 }

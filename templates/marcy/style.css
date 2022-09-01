@@ -74,3 +74,18 @@ footer p {
     transform:scale(1.04);
     opacity:1;
 }
+.artinfo_wrap {
+    display: flex;
+    gap: 2rem;
+    flex-wrap:wrap;
+}
+.artinfo_wrap p {
+    margin:0;
+}
+.artinfo_item label {
+    font-size:80%;
+    font-weight:900;
+}
+.artdesc p:last-of-type {
+    margin-bottom:0;
+}
