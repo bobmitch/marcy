@@ -81,6 +81,15 @@
 					"description":"Will be shown in dollars. No cents please - whole numbers only!"
 				},
 				{
+					"name":"artdescription",
+					"id":"artdescription",
+					"type":"Rich",
+					"filter":"RAW",
+					"required":false,
+					"label":"Extended Description",
+					"description":"Not required, but useful!"
+				},
+				{
 					"name":"artimages",
 					"id":"artimages",
 					"type":"Repeatable",
