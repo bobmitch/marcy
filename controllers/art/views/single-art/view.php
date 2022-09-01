@@ -5,18 +5,13 @@ defined('CMSPATH') or die; // prevent unauthorized access
 <section class='container'>
     <h1><?=$art->title;?></h1>
 
-    <section class='fullimage'>
-        <?php $image->render('web','fullimage');?>
-    </section>
-    
-    
     <article class='artinfo'>
         <header>
             <div class='artinfo_wrap'>
-                <div class='artinfo_item'>
+                <!-- <div class='artinfo_item'>
                     <label>Title</label>
                     <p><?=$art->title;?></p>
-                </div>
+                </div> -->
                 <div class='artinfo_item'>
                     <label>Size</label>
                     <p><?=$art->f_artdimensions;?></p>
@@ -47,8 +42,11 @@ defined('CMSPATH') or die; // prevent unauthorized access
             </aside>  
         <?php endif; ?>
     </article>
-    
 
+    <section class='fullimage'>
+        <?php $image->render('web','fullimage');?>
+    </section>
+    
     <?php if ($grid_images):?>
         <section class="artgrid_wrap">
             <?php foreach ($grid_images as $grid_image):?>

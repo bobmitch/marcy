@@ -6,13 +6,11 @@ defined('CMSPATH') or die; // prevent unauthorized access
 $searchtext = Input::getvar('searchtext','STRING');
 
 $content_search = new Content_Search();
-$content_search->created_by_cur_user = true; // restrict to content created by current logged in user
 $content_search->type_filter = 2;
 $content_search->page = 1;
 $content_search->order_by = "created";
 $content_search->order_direction = "DESC";
 $content_search->page_size = 99999999; // silly large number
-$content_search->page = 1; // always one for ordering view
 if ($searchtext) {
     $content_search->searchtext = $searchtext;
 }

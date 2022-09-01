@@ -77,13 +77,16 @@ footer p {
 .artinfo_wrap {
     display: flex;
     gap: 2rem;
-    flex-wrap:wrap;
+    justify-content: space-around;
 }
 .artinfo_wrap p {
     margin:0;
 }
+.artinfo_item p {
+    font-size:0.8em;
+}
 .artinfo_item label {
-    font-size:80%;
+    font-size:0.6em;
     font-weight:900;
 }
 .artdesc p:last-of-type {
