@@ -33,12 +33,7 @@ class Widget_artgrid extends Widget {
 			<div class="artgrid_wrap">
 				
 				<?php foreach ($art_content_items as $art):?>
-					<div class="artgrid_item">
-						<?php 
-							$art_image = new Image($art->f_artthumbnail);
-							$art_image->render(300,'artgrid_image');
-						?>
-					</div>
+					<?php User_Art::render_art_grid_item($art); ?>
 				<?php endforeach; ?>
 				
 			</div>
