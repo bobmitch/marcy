@@ -60,7 +60,7 @@
 			</ul>
 		</section>
 		<section class='container'>
-			<p>All content copyright &copy;2022 - Marcy Mitchell. All rights reserved.</p>
+			<p>All content copyright &copy;<?=date("Y");?> Marcy Mitchell.<br>All rights reserved.</p>
 		</section>
 		<?php CMS::Instance()->render_widgets('Footer');?>
 	</footer>
