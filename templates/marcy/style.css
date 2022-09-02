@@ -101,7 +101,7 @@ footer p {
 
 img.pull-right {
     float:right;
-    max-width:40%;
+    max-width:50%;
     margin-left:1rem;
     margin-bottom:1rem;
 }
@@ -145,14 +145,14 @@ section.blog_list_wrap {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-#socials {
+.socials {
     display:flex;
     justify-content: center;
     gap:2rem;
     margin:2rem;
     align-items: center;
 }
-#socials li {
+.socials li {
     list-style:none;
     padding:0;
     margin:0;
@@ -209,4 +209,20 @@ div.flex.cardwidth p:first-of-type {
 }
 div.flex.cardwidth > * {
     max-width:45%;
+}
+.container#topnav {
+    position: sticky;
+    /* top: -1rem; */
+    top: 0rem;
+    background: var(--background-color);
+    z-index: 10;
+}
+@media (max-width: 350px) {
+    /* iphone se bullshit */
+    a.page_id_1 {
+        max-width:75%;
+    }
+    :root {
+        --font-size:14px;
+    }
 }
