@@ -53,7 +53,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
                 <div class="artgrid_item">
                     <?php 
                     $image = new Image($grid_image->fields->artimage->default);
-                    $image->render(300,'grid_image_only'); 
+                    $image->render(400,'grid_image_only'); 
                     ?>
                 </div>
             <?php endforeach; ?>

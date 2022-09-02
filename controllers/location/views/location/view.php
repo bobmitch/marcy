@@ -35,5 +35,18 @@ defined('CMSPATH') or die; // prevent unauthorized access
         <?php endif; ?>
     </article>
 
+    <?php if ($grid_images):?>
+        <section class="artgrid_wrap">
+            <?php foreach ($grid_images as $grid_image):?>
+                <div class="artgrid_item">
+                    <?php 
+                    $image = new Image($grid_image->fields->artimage->default);
+                    $image->render(400,'grid_image_only'); 
+                    ?>
+                </div>
+            <?php endforeach; ?>
+        </section>
+    <?php endif; ?>
+
     <?php //CMS::pprint_r ($location); ?>
 <?php endif; ?>

@@ -10,7 +10,7 @@ class User_Art {
 			<a href='<?=Config::$uripath;?>/my-work/<?=$art->alias;?>'>
 			<?php 
 				$art_image = new Image($art->f_artthumbnail);
-				$art_image->render(300,'artgrid_image');
+				$art_image->render(400,'artgrid_image');
 			?>
 			</a>
 		</div>

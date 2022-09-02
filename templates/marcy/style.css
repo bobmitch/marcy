@@ -48,7 +48,7 @@ a.page_id_1 {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
-.artgrid_image {
+.artgrid_image, .grid_image_only {
     display:block;
     object-fit: cover;
     aspect-ratio:1/1;
@@ -91,4 +91,20 @@ footer p {
 }
 :is(.artdesc, article) p:last-of-type {
     margin-bottom:0;
+}
+
+.rich_image.pull-right {
+    float:right;
+    max-width:40%;
+    margin-left:1rem;
+    margin-bottom:1rem;
+}
+
+section,aside {
+    clear:both;
+}
+aside::after {
+    content: "";
+    clear: both;
+    display:table;
 }

@@ -54,6 +54,15 @@
 					"description":"Allow location to be listed with it's details. For example, you may not want to show 'Home' information. :)",
 					"default":1,
 					"filter":"INT"
+				},
+				{
+					"name":"locationimages",
+					"id":"locationimages",
+					"type":"Repeatable",
+					"label":"Location Images",
+					"required":false,
+					"form_path":"/controllers/art/artimages.json",
+					"description":"Include any other images of this location here for a mini gallery!"
 				}
 			]
 		}
