@@ -99,17 +99,17 @@ footer p {
     margin-bottom:0;
 }
 
-.rich_image.pull-right {
+img.pull-right {
     float:right;
     max-width:40%;
     margin-left:1rem;
     margin-bottom:1rem;
 }
 
-section,aside {
+section,aside,article {
     clear:both;
 }
-aside::after {
+aside::after, article::after {
     content: "";
     clear: both;
     display:table;
@@ -125,7 +125,23 @@ ul.taglist {
 ul.taglist li {
     list-style:none;
 }
-ul.taglist li a {
-    font-size:0.6em;
+ul.taglist li a, a[role='button'].small {
     padding:0.3em 0.6em;
+    font-size:0.8em;
+}
+.readmore {
+    font-size:0.8em;
+    margin-top:2rem;
+}
+section.blog_list_wrap {
+    display: flex;
+    gap: 1rem;
+}
+@media (max-width: 768px) {
+    section.blog_list_wrap {
+        display: block;
+    }
+    .artgrid_wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

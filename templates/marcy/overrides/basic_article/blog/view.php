@@ -2,7 +2,15 @@
 defined('CMSPATH') or die; // prevent unauthorized access
 // basic_article/blog override
 ?>
-<h1 class='title is-1'><?php echo CMS::Instance()->page->title;?></h1>
+<?php if ($blog_content_item):?>
+	<hgroup>
+		<h1 class='title is-1'><?php echo CMS::Instance()->page->title;?></h1>
+		<h5 class='title is-5'><?php echo date("F jS, Y", strtotime($blog->start));?></h5>
+	</hgroup>
+<?php else: ?>
+	<h1 class='title is-1'><?php echo CMS::Instance()->page->title;?></h1>
+<?php endif; ?>
+
 <?php if (sizeof($blog_content_items)==0):?>
 <p>No blog entries found!</p>
 <?php endif; ?>
@@ -33,12 +41,12 @@ defined('CMSPATH') or die; // prevent unauthorized access
 				<p class='preview'>
 				<?php if ($blog->f_og_image) {
 					$thumb = $img = new Image($blog->f_og_image);
-					$thumb->render('thumb','thumb square pull-right');
+					$thumb->render(600,'thumb square pull-right');
 				}
 				echo $blog->f_og_description; ?>
 				</p>
 			<?php endif; ?>
-			<a class='readmore' href='<?php echo CMS::Instance()->page->get_url() . "/" . $blog->alias;?>'>Read More</a>
+			<a role='button' class='readmore secondary small' href='<?php echo CMS::Instance()->page->get_url() . "/" . $blog->alias;?>'>Read More</a>
 			
 		</article>
 	<?php endforeach; ?>
