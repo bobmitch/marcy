@@ -1,0 +1,33 @@
+
+		{
+			"title":"Exhibition",
+			"id":"exhibition",
+			"fields":[
+				{
+					"type":"Text",
+					"id":"exhibitionaddress",
+					"name":"exhibitionaddress",
+					"required":false, 
+					"label":"Address",
+					"filter":"STRING"
+				},
+				{
+					"type":"Text",
+					"id":"exhibitioncity",
+					"name":"exhibitioncity",
+					"required":true, 
+					"label":"City",
+					"filter":"STRING"
+				},
+				{
+					"type":"Text",
+					"id":"exhibitionstate",
+					"name":"exhibitionstate",
+					"required":true, 
+					"label":"State",
+					"default":"MI",
+					"filter":"STRING"
+				}
+				
+			]
+		}

@@ -5,12 +5,14 @@
 # Recursively allow files under subtree
 !/core/controllers/art/**
 !/controllers/art/**
+!/controllers/exhibition/**
 !/controllers/location/**
 !/templates/marcy/**
 !/user_classes/**
 !.gitignore
 !README.md
 !/widgets/login/**
+!/widgets/exhibitions/**
 !/widgets/hero/**
 !/widgets/artgrid/**
 !/widgets/contactform/**
