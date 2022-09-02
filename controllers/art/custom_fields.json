@@ -81,6 +81,15 @@
 					"description":"Will be shown in dollars. No cents please - whole numbers only!"
 				},
 				{
+					"type":"Text",
+					"filter":"URL",
+					"id":"shopurl",
+					"name":"shopurl",
+					"required":false,
+					"label":"Shop URL",
+					"description":"Direct link to cart/purchase page if available"
+				},
+				{
 					"name":"artdescription",
 					"id":"artdescription",
 					"type":"Rich",
