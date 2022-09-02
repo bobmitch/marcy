@@ -35,16 +35,33 @@ defined('CMSPATH') or die; // prevent unauthorized access
         <?php endif; ?>
     </article>
 
+    <?php if ($arts):?>
+        <section id='artforsalehere'>
+            <h2>Art Available Here</h2>
+            <div class="artgrid_wrap">
+                <?php foreach ($arts as $art):?>
+                    <?php User_Art::render_art_grid_item($art); ?>
+                <?php endforeach; ?>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    
+
     <?php if ($grid_images):?>
-        <section class="artgrid_wrap">
-            <?php foreach ($grid_images as $grid_image):?>
-                <div class="artgrid_item">
-                    <?php 
-                    $image = new Image($grid_image->fields->artimage->default);
-                    $image->render(400,'grid_image_only'); 
-                    ?>
-                </div>
-            <?php endforeach; ?>
+        <section>
+            <h3>Gallery</h3>
+            <section class="artgrid_wrap">    
+            
+                <?php foreach ($grid_images as $grid_image):?>
+                    <div class="artgrid_item">
+                        <?php 
+                        $image = new Image($grid_image->fields->artimage->default);
+                        $image->render(400,'grid_image_only'); 
+                        ?>
+                    </div>
+                <?php endforeach; ?>
+            </section>
         </section>
     <?php endif; ?>
 

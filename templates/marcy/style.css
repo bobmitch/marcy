@@ -162,3 +162,15 @@ span.hidden {
     display: inline-block;
     text-indent:-9999px;
 }
+p.art_title {
+    margin-top:1em;
+    text-align:center;
+    font-size:75%;
+    font-style:italic;
+}
+p.art_title::before {
+    content:"\201C";
+}
+p.art_title::after {
+    content:"\201D";
+}

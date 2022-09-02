@@ -11,6 +11,7 @@ class User_Art {
 			<?php 
 				$art_image = new Image($art->f_artthumbnail);
 				$art_image->render(400,'artgrid_image');
+				echo "<p class='art_title'>" . $art->title . "</p>";
 			?>
 			</a>
 		</div>
