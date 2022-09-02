@@ -145,3 +145,20 @@ section.blog_list_wrap {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+#socials {
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+    margin:2rem;
+}
+#socials li {
+    list-style:none;
+    padding:0;
+}
+a.hasicon:hover {
+    text-decoration:none;
+}
+span.hidden {
+    display: inline-block;
+    text-indent:-9999px;
+}
