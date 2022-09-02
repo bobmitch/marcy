@@ -1,3 +1,9 @@
+/* pico overrides */
+:root * {
+    --block-spacing-vertical: calc(var(--spacing)*2); /* no double vertical spacing on block items thanks */
+}
+/* end pico overrides */
+
 .blog_tag_list_wrap {
     display:none;
 }
