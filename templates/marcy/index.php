@@ -18,7 +18,7 @@
 		<?php CMS::Instance()->render_widgets('Top Nav');?>
 	</div>
 
-	<div id='messages'>
+	<div id='messages' class='container'>
 	<?php CMS::Instance()->display_messages();?>
 	</div>
 

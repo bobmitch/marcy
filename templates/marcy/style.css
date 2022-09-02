@@ -185,3 +185,9 @@ p.art_title::after {
         text-align:center;
     }
 }
+button.close.delete {
+    display:none;
+}
+#messages p {
+    font-weight:bold;
+}
