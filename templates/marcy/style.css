@@ -150,10 +150,12 @@ section.blog_list_wrap {
     justify-content: center;
     gap:2rem;
     margin:2rem;
+    align-items: center;
 }
 #socials li {
     list-style:none;
     padding:0;
+    margin:0;
 }
 a.hasicon:hover {
     text-decoration:none;
@@ -161,6 +163,7 @@ a.hasicon:hover {
 span.hidden {
     display: inline-block;
     text-indent:-9999px;
+    position: absolute;
 }
 p.art_title {
     margin-top:1em;
@@ -205,5 +208,5 @@ div.flex.cardwidth p:first-of-type {
     margin-bottom:0;
 }
 div.flex.cardwidth > * {
-    max-width:50%;
+    max-width:45%;
 }

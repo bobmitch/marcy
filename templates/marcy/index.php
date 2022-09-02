@@ -53,6 +53,11 @@
 					</a>
 				</li>
 				<li>
+					<a target="_blank" href="<?php echo Config::$uripath;?>/patreon">
+						Patreon
+					</a>
+				</li>
+				<li>
 					<a target="_blank" href="https://linktr.ee/marcymitchellart">
 						LinkTree
 					</a>
