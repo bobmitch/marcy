@@ -109,7 +109,7 @@ img.pull-right {
 section,aside,article {
     clear:both;
 }
-aside::after, article::after {
+aside::after, article::after, .single_blog_wrap::after {
     content: "";
     clear: both;
     display:table;

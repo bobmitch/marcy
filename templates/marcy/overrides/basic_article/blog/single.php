@@ -5,16 +5,10 @@ $tags = Tag::get_tags_for_content($blog->id, 1);
 <!-- <h4 class='title is-4'><?php echo $blog->title; ?></h4> -->
 <div class='single_blog_wrap'>
     
-    <div class='blog_tag_list_wrap'>
-        <ol class='blog_tag_list'>
-            <?php foreach ($tags as $tag):?>
-                <?php if ($tag->public):?>
-                <li>
-                    <a href='<?php echo CMS::Instance()->page->get_url();?>/tag/<?php echo $tag->alias;?>' class='blog_list_tag_link'><?php echo $tag->title;?></a>
-                </li>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </ol>
-    </div>
+    <?php if ($blog->f_og_image) {
+        $image = new Image($blog->f_og_image);
+        $image->render(600,'medium pull-right');
+    }
+    ?>
     <?php echo $blog->f_markup; ?>
 </div>
