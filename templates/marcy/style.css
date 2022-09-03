@@ -23,7 +23,7 @@ img {
 }
 nav {
     margin-top:2rem;
-    margin-bottom:2rem;
+    /* margin-bottom:2rem; */
 }
 nav ul {
     width: 100%;
@@ -217,12 +217,12 @@ div.flex.cardwidth > * {
     background: var(--background-color);
     z-index: 10;
 }
-@media (max-width: 350px) {
+@media (max-width: 380px) {
     /* iphone se bullshit */
     a.page_id_1 {
         max-width:75%;
     }
     :root {
-        --font-size:14px;
+        --font-size:12px !important;
     }
 }
