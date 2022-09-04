@@ -43,7 +43,7 @@ class Widget_contactform extends Widget {
 				exit(0);			
 			}
 			$mail = new Mail();
-			$mail->addAddress("bobmitch@gmail.com","Bob Mitchell");
+			$mail->addAddress("marcymitchellart@gmail.com","Marcy Mitchell");
 			$mail->subject = "Contact From Marcy Mitchell Art Website";
 			$mail->html = "<h1>From {$name}</h1>";
 			$mail->html .= "<h2>Email: {$email}</h2>";
