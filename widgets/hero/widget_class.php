@@ -8,7 +8,7 @@ class Widget_hero extends Widget {
 		$cta_text = $options[3]->value;
 		$cta_url = $options[4]->value;
 		?>
-		<header class='hero_wrap container' style='background-image:url(/image/<?php echo $this->options[2]->value; ?>)'>
+		<header class='hero_wrap container' style='background-image:url(/image/<?php echo $this->options[2]->value; ?>/1800/webp)'>
 			
 		</header>
 		<?php
