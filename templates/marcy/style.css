@@ -226,3 +226,10 @@ div.flex.cardwidth > * {
         --font-size:12px !important;
     }
 }
+h1 {
+    background-image: -webkit-linear-gradient(var(--primary), var(--h1-color));
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.3;
+}
