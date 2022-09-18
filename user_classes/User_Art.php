@@ -27,7 +27,7 @@ class User_Art {
 		// if 'listlocation' is true, then wrap in link, otherwise just return name
 		$location = Content::get_all_content_for_id($id);
 		if ($location->f_listlocation) {
-			echo "<a href='" . Config::$uripath . "/galleries/" . $location->alias . "'>" . $location->title . "</a>";
+			echo "<a href='" . Config::$uripath . "/representation/" . $location->alias . "'>" . $location->title . "</a>";
 		}
 		else {
 			echo $location->title;

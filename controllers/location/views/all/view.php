@@ -17,7 +17,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
                 <?php if ($location->f_locationaddress) { echo $location->f_locationaddress . "<br>"; } ?>
                 <?= $location->f_locationcity . "<br>" . $location->f_locationstate; ?>
             </p>
-            <p><a role="button" class='secondary small' href="<?php echo Config::$uripath . "/galleries/" . $location->alias;?>" >More Info</a></p>
+            <p><a role="button" class='secondary small' href="<?php echo Config::$uripath . "/representation/" . $location->alias;?>" >More Info</a></p>
         </article>
     <?php endforeach; ?>
 </div>
