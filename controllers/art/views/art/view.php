@@ -46,7 +46,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
                             </select>
                         </div>
                         <label for='maxprice'>Max Price <span id='maxprice_wrap'>($<span id='maxprice_val'>10000</span>)</span>
-                            <input oninput='update_maxprice();' id='maxprice' name='maxprice' type='range' value='5000' step='50' min='10' max='10000'>
+                            <input oninput='update_maxprice();' id='maxprice' name='maxprice' type='range' value='10000' step='50' min='10' max='10000'>
                         </label>
                         <label>&nbsp;
                             <button type="submit">Search</button>
