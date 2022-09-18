@@ -8,7 +8,7 @@ if ($segments[0]=='tagged' && sizeof($segments)==2) {
 
 $available_tags = Tag::get_tags_available_for_content_type (2); // art content
 
-$available_catids = DB::fetchAll('select id,title from categories where content_type=2');
+$available_catids = DB::fetchAll('select id,title from categories where content_type=2 and status>0');
 
 $alias = CMS::Instance()->uri_segments[0];
 
