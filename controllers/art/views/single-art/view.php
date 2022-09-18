@@ -20,7 +20,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
         </ul>
     <?php endif; ?>
 
-    <?php if ($art->f_shopurl && $art->f_artstatus=='Available'):?>
+    <?php if ($art->f_shopurl && $art->category!=4):?>
         <p>
             <a role='button' target='_blank' href='<?= $art->f_shopurl; ?>'>
             Buy Online &nbsp;&nbsp;
