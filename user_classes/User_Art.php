@@ -7,7 +7,7 @@ class User_Art {
 	public static function render_art_grid_item($art, $showdimensions=true) {
 		?>
 		<div class="artgrid_item cat_<?php echo $art->category; ?>">
-			<a href='<?=Config::$uripath;?>/my-work/<?=$art->alias;?>'>
+			<a href='<?=Config::$uripath;?>/art/<?=$art->alias;?>'>
 			<?php 
 				$art_image = new Image($art->f_artthumbnail);
 				$art_image->render(400,'artgrid_image');

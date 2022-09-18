@@ -188,7 +188,6 @@ span.hidden {
 p.art_title {
     margin-top:1em;
     text-align:center;
-    font-size:75%;
     font-style:italic;
 }
 p.art_title::before {

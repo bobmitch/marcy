@@ -16,38 +16,46 @@ defined('CMSPATH') or die; // prevent unauthorized access
 
     <?php if ($available_tags):?>
         <ul class='taglist'>
-            <?php foreach ($available_tags as $tag):?>
-                <li class='tag'><a role='button' class='secondary' href='<?= Config::$uripath . "/my-work/tagged/" . $tag->alias;?>'><?=$tag->title;?></a></li>
+            <?php foreach ($available_tags as $atag):?>
+                <li class='tag'><a role='button' class='secondary' href='<?= Config::$uripath . "/art/tagged/" . $atag->alias;?>'><?=$atag->title;?></a></li>
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
-
-    <section id='filter_art'>
-        <form action="" method="GET" >
-            <div class='grid'>
-                <div>
-                    <label for="status">Status</label>
-                    <select id="status" required>
-                        <option value="All" selected>All</option>
-                        <?php foreach ($available_catids as $cat): ?>
-                            <option value='<?=$cat->id;?>'><?=$cat->title;?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div>
-                    <label for="framed">Framed</label>
-                    <select id="framed" required>
-                        <option value="All" selected>Either</option>
-                        <option value="framed">Framed</option>
-                        <option value="unframed">Unframed</option>
-                    </select>
-                </div>
-                <label for='maxprice'>Max Price <span id='maxprice_wrap'>($<span id='maxprice_val'>5000</span>)</span>
-                    <input oninput='update_maxprice();' id='maxprice' name='maxprice' type='range' value='5000' step='50' min='10' max='10000'>
-                </label>
-            </div>
-        </form>
-    </section>
+    
+    <?php if (!$tag):?>
+        <details>
+            <summary>Search / Filter</summary>
+            <section id='filter_art'>
+                <form action="" method="GET" >
+                    <div class='grid'>
+                        <div>
+                            <label for="status">Status</label>
+                            <select name='status' id="status" required>
+                                <option value="All" selected>All</option>
+                                <?php foreach ($available_catids as $cat): ?>
+                                    <option value='<?=$cat->id;?>'><?=$cat->title;?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="framed">Framed</label>
+                            <select name='framed' id="framed" required>
+                                <option value="All" selected>Either</option>
+                                <option value="1">Framed</option>
+                                <option value="0">Unframed</option>
+                            </select>
+                        </div>
+                        <label for='maxprice'>Max Price <span id='maxprice_wrap'>($<span id='maxprice_val'>10000</span>)</span>
+                            <input oninput='update_maxprice();' id='maxprice' name='maxprice' type='range' value='5000' step='50' min='10' max='10000'>
+                        </label>
+                        <label>&nbsp;
+                            <button type="submit">Search</button>
+                        </label>
+                    </div>
+                </form>
+            </section>
+        </details>
+    <?php endif; ?>
 
     <div class="artgrid_wrap">
         

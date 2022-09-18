@@ -8,7 +8,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
     <?php if ($tags):?>
         <ul class='taglist'>
             <?php foreach ($tags as $tag):?>
-                <li class='tag'><a role='button' class='secondary' href='<?= Config::$uripath . "/my-work/tagged/" . $tag->alias;?>'><?=$tag->title;?></a></li>
+                <li class='tag'><a role='button' class='secondary' href='<?= Config::$uripath . "/art/tagged/" . $tag->alias;?>'><?=$tag->title;?></a></li>
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
