@@ -17,6 +17,7 @@ $content_search->type_filter = 2;
 $content_search->page = 1;
 $content_search->order_by = "created";
 $content_search->order_direction = "DESC";
+$content_search->list_fields = ['artdimensions','artthumbnail'] ;
 $content_search->page_size = 99999999; // silly large number
 if ($searchtext) {
     $content_search->searchtext = $searchtext;
@@ -28,4 +29,4 @@ if ($tag) {
 $my_art = $content_search->exec();
 $my_art_count = $content_search->get_count();
 
-//CMS::pprint_r ($my_art);
+//CMS::pprint_r ($my_art); exit();

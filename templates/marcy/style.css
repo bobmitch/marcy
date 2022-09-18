@@ -195,6 +195,13 @@ p.art_title::before {
 p.art_title::after {
     content:"\201D";
 }
+p.art_size {
+    margin-top:-2em;
+    text-align:center;
+    font-size:75%;
+    font-style:italic;
+    opacity:0.5;
+}
 @media (max-width: 992px) {
     nav ul {
         flex-wrap:wrap;

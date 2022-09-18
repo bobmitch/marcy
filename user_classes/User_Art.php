@@ -4,7 +4,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
 // user space class for User stuff
 
 class User_Art {
-	public static function render_art_grid_item($art) {
+	public static function render_art_grid_item($art, $showdimensions=true) {
 		?>
 		<div class="artgrid_item cat_<?php echo $art->category; ?>">
 			<a href='<?=Config::$uripath;?>/my-work/<?=$art->alias;?>'>
@@ -12,8 +12,12 @@ class User_Art {
 				$art_image = new Image($art->f_artthumbnail);
 				$art_image->render(400,'artgrid_image');
 				echo "<p class='art_title'>" . $art->title . "</p>";
+				
 			?>
 			</a>
+			<?php if ($showdimensions):?>
+			<p class='art_size'><?= $art->f_artdimensions;?></p>
+			<?php endif; ?>
 		</div>
 		<?php
 	}
