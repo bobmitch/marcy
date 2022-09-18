@@ -2,7 +2,7 @@
 		{
 			"title":"Art",
 			"id":"art",
-			"list":["artthumbnail","artlocation","artstatus"],
+			"list":["artthumbnail","artlocation"],
 			"fields":[
 				{
 					"name":"artthumbnail",
@@ -72,6 +72,31 @@
 					]
 				},
 				{
+					"type":"Select",
+					"id":"artsupports",
+					"name":"artsupports",
+					"required":true, 
+					"label":"Supports",
+					"default":"canvas",
+						"filter":"STRING",
+						"placeholder":"Please select",
+					"select_options":[
+						{"text":"Canvas","value":"Canvas"},
+						{"text":"Paper","value":"Paper"},
+						{"text":"Panel","value":"Panel"},
+						{"text":"Cradled Panel","value":"Cradled Panel"}
+					]
+				},
+				{
+					"type":"Checkbox",
+					"id":"artframed",
+					"name":"artframed",
+					"required":false, 
+					"label":"Framed",
+					"default":0,
+					"filter":"INT"
+				},
+				{
 					"type":"Contentselector",
 					"content_type":3,
 					"multiple":false,
@@ -81,21 +106,6 @@
 					"label":"Location",
 					"description":"Select where this work is currently available to view/purchase. (Some locations may be unlisted, and nothing will be shown)",
 					"default":5
-				},
-				{
-					"type":"Select",
-					"id":"artstatus",
-					"name":"artstatus",
-					"required":true, 
-					"label":"Status",
-					"default":"Available",
-						"filter":"STRING",
-						"placeholder":"Please select",
-					"select_options":[
-						{"text":"Available","value":"Available"},
-						{"text":"Sold","value":"Sold"},
-						{"text":"In Progress","value":"In Progress"}
-					]
 				},
 				{
 					"type":"Text",
