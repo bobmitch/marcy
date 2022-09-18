@@ -252,7 +252,7 @@ div.flex.cardwidth > * {
     background: var(--background-color);
     z-index: 10;
 }
-@media (max-width: 390px) {
+@media (max-width: 430px) {
     /* iphone se bullshit */
     a.page_id_1 {
         max-width:75%;

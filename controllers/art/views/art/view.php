@@ -28,6 +28,10 @@ defined('CMSPATH') or die; // prevent unauthorized access
             <section id='filter_art'>
                 <form action="" method="GET" >
                     <div class='grid'>
+                        <label>
+                            Name
+                            <input name='searchtext' id='searchtext'>
+                        </label>
                         <div>
                             <label for="status">Status</label>
                             <select name='status' id="status" required>
@@ -60,7 +64,9 @@ defined('CMSPATH') or die; // prevent unauthorized access
     <div class="artgrid_wrap">
         
         <?php foreach ($my_art as $art):?>
-            <?php User_Art::render_art_grid_item($art); ?>
+            <?php if ( ($maxprice && $maxprice >= $art->f_price) || !$maxprice ):?>
+                <?php User_Art::render_art_grid_item($art); ?>
+            <?php endif; ?>
         <?php endforeach; ?>
         
     </div>

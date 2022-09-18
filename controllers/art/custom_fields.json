@@ -113,7 +113,7 @@
 					"id":"price",
 					"name":"price",
 					"default":0,
-					"required":false,
+					"required":true,
 					"label":"Price",
 					"description":"Will be shown in dollars. No cents please - whole numbers only!"
 				},
