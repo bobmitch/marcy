@@ -112,6 +112,15 @@ footer p {
 .artinfo_item label {
     font-size:0.6em;
     font-weight:900;
+    font-weight:normal;
+    opacity:0.7;
+}
+.artinfo_item.bold p {
+    font-size:1rem;
+    font-weight:900;
+}
+p.Sold {
+    color: #a55;
 }
 :is(.artdesc, article) p:last-of-type {
     margin-bottom:0;

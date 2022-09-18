@@ -1,9 +1,16 @@
 <?php
 defined('CMSPATH') or die; // prevent unauthorized access
 ?>
-
+<?php //CMS::pprint_r ($art); ?>
 <section class='container'>
-    <h1><?=$art->title;?></h1>
+    
+    <h1>
+        <?=$art->title;?>
+    </h1>
+    <p class='art_info_main'>
+        <?=$art->f_artdimensions;?>" <?=strtolower($art->f_artmedia);?> on <?=strtolower($art->f_artsupports);?>, <?=$art->f_artframed ? "framed" : "unframed";?>. 
+        Completed <?= date('M Y',strtotime($art->start));?>.
+    </p>
 
     <?php if ($tags):?>
         <ul class='taglist'>
@@ -25,38 +32,22 @@ defined('CMSPATH') or die; // prevent unauthorized access
     <article class='artinfo'>
         <header>
             <div class='artinfo_wrap'>
-                <!-- <div class='artinfo_item'>
-                    <label>Title</label>
-                    <p><?=$art->title;?></p>
-                </div> -->
-                <div class='artinfo_item'>
-                    <label>Size</label>
-                    <p><?=$art->f_artdimensions;?></p>
-                </div>
-                <div class='artinfo_item'>
-                    <label>Medium</label>
-                    <p><?=$art->f_artmedia;?></p>
-                </div>
-                <div class='artinfo_item'>
-                    <label>Location</label>
-                    <p><?php User_Art::render_location_name($art->f_artlocation);?></p>
-                </div>
-                
-                <div class='artinfo_item'>
-                    <label>Completed</label>
-                    <p><?= date('M d Y',strtotime($art->start));?></p>
-                </div>
-
-                <?php if ($art->f_price):?>
-                    <div class='artinfo_item'>
-                        <label>Price</label>
-                        <p>$<?=$art->f_price;?></p>
-                    </div>
-                <?php endif; ?>
 
                 <div class='artinfo_item'>
                     <label>Status</label>
                     <p class="<?php echo $art_categories_keyed[$art->category]->title ?? "Available";?>"><?php echo $art_categories_keyed[$art->category]->title ?? "Available";?></p>
+                </div>
+
+                <?php if ($art->f_price):?>
+                    <div class='artinfo_item bold'>
+                        <label>Price</label>
+                        <p>$<?=$art->f_price;?></p>
+                    </div>
+                <?php endif; ?>
+                
+                <div class='artinfo_item'>
+                    <label>Location</label>
+                    <p><?php User_Art::render_location_name($art->f_artlocation);?></p>
                 </div>
 
             </div>
