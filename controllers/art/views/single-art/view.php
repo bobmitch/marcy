@@ -39,7 +39,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
                 </div>
 
                 <?php if ($art->f_price):?>
-                    <div class='artinfo_item bold'>
+                    <div class='artinfo_item <?php echo $art_categories_keyed[$art->category]->title ?? "Available";?>'>
                         <label>Price</label>
                         <p>$<?=$art->f_price;?></p>
                     </div>

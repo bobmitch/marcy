@@ -55,6 +55,11 @@
 			</ul>
 			<ul class='flex socials' id='links'>
 				<li>
+					<a target="_blank" href="<?php echo Config::$uripath;?>/faq">
+						FAQ
+					</a>
+				</li>
+				<li>
 					<a target="_blank" href="<?php echo Config::$uripath;?>/patreon">
 						Patreon
 					</a>
