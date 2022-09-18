@@ -62,6 +62,24 @@ a.page_id_1 {
     transform:scale(1);
     opacity:1;
 }
+.artgrid_item {
+    position:relative;
+}
+.artgrid_item.cat_4::before {
+    /* sold */
+    content:'';
+    display:block;
+    height:1rem;
+    width:1rem;
+    top:1rem;
+    right:1rem;
+    background:#d33;
+    filter: drop-shadow(0.1em 0.1em 0.1em rgba(0,0,0,0.5));
+    border-radius:50%;
+    position:absolute;
+    z-index:2;
+    pointer-events: none;
+}
 footer {
     margin-top:2rem;
     background-color:var(--background-color);

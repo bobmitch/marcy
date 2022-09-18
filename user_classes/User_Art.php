@@ -6,7 +6,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
 class User_Art {
 	public static function render_art_grid_item($art) {
 		?>
-		<div class="artgrid_item">
+		<div class="artgrid_item cat_<?php echo $art->category; ?>">
 			<a href='<?=Config::$uripath;?>/my-work/<?=$art->alias;?>'>
 			<?php 
 				$art_image = new Image($art->f_artthumbnail);
