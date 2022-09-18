@@ -21,6 +21,7 @@ $content_search = new Content_Search();
 $content_search->type_filter = 2;
 $content_search->page = 1;
 $content_search->order_by = "created";
+$content_search->published_only = true;
 $content_search->order_direction = "DESC";
 $content_search->list_fields = ['artdimensions','artthumbnail','artframed','price'] ;
 $content_search->page_size = 99999999; // silly large number

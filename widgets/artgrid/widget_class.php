@@ -21,7 +21,7 @@ class Widget_artgrid extends Widget {
 			}
 			else {
 				// get rando
-				$art_id = DB::fetch('SELECT id FROM content WHERE content_type=2 ORDER BY RAND() LIMIT 1;')->id;
+				$art_id = DB::fetch('SELECT id FROM content WHERE content_type=2 AND state>0 ORDER BY RAND() LIMIT 1;')->id;
 			}
 			$art_content_items[] = Content::get_all_content_for_id($art_id);
 		}
