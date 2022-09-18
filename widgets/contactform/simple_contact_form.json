@@ -34,6 +34,16 @@
             "maxlength":255,
             "input_type":"textarea"
 		},
+		{
+			"type":"Checkbox",
+			"id":"addlist",
+			"name":"addlist",
+			"required":false, 
+			"label":"Add Me To Your Mailing List",
+			"default":0,
+			"description":"Be first to hear about upcoming shows and special offers not shown anywhere else.",
+			"filter":"INT"
+		},
         {
 			"name":"submit",
 			"id":"submit",
