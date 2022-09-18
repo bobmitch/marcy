@@ -56,7 +56,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
 
                 <div class='artinfo_item'>
                     <label>Status</label>
-                    <p><?=$art->f_artstatus;?></p>
+                    <p><?php echo $art_categories_keyed[$art->category]->title ?? "Available";?></p>
                 </div>
 
             </div>
