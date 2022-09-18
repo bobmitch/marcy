@@ -2,7 +2,7 @@
 		{
 			"title":"Art",
 			"id":"art",
-			"list":["artthumbnail","artlocation"],
+			"list":["artthumbnail","artlocation","artstatus"],
 			"fields":[
 				{
 					"name":"artthumbnail",
@@ -38,10 +38,37 @@
 						"filter":"STRING",
 						"placeholder":"Please select",
 					"select_options":[
+						{"text":"4x4","value":"4x4"},
+						{"text":"4x6","value":"4x6"},
 						{"text":"6x6","value":"6x6"},
-						{"text":"11x7","value":"11x7"},
+						{"text":"5x7","value":"5x7"},
+						{"text":"8x8","value":"8x8"},
+						{"text":"8x10","value":"8x10"},
+						{"text":"10x10","value":"10x10"},
 						{"text":"12x12","value":"12x12"},
-						{"text":"24x16","value":"24x16"}
+						{"text":"11x14","value":"11x14"},
+						{"text":"12x16","value":"12x16"},
+						{"text":"10x20","value":"10x20"},
+						{"text":"16x20","value":"16x20"},
+						{"text":"12x24","value":"12x24"},
+						{"text":"16x16","value":"16x16"},
+						{"text":"18x18","value":"18x18"},
+						{"text":"20x20","value":"20x20"},
+						{"text":"18x24","value":"18x24"},
+						{"text":"10x24","value":"10x24"},
+						{"text":"20x24","value":"20x24"},
+						{"text":"24x24","value":"24x24"},
+						{"text":"24x30","value":"24x30"},
+						{"text":"24x36","value":"24x36"},
+						{"text":"30x30","value":"30x30"},
+						{"text":"30x40","value":"30x40"},
+						{"text":"36x36","value":"36x36"},
+						{"text":"30x48","value":"30x48"},
+						{"text":"40x40","value":"40x40"},
+						{"text":"36x48","value":"36x48"},
+						{"text":"40x50","value":"40x50"},
+						{"text":"40x60","value":"40x60"},
+						{"text":"48x60","value":"48x60"}
 					]
 				},
 				{
