@@ -62,14 +62,16 @@ defined('CMSPATH') or die; // prevent unauthorized access
     <?php endif; ?>
 
     <div class="artgrid_wrap">
-        
+        <?php $rendered = 0; ?>
         <?php foreach ($my_art as $art):?>
             <?php if ( ($maxprice && $maxprice >= $art->f_price) || !$maxprice ):?>
-                <?php User_Art::render_art_grid_item($art); ?>
+                <?php User_Art::render_art_grid_item($art); $rendered++;?>
             <?php endif; ?>
         <?php endforeach; ?>
-        
     </div>
+    <?php if ($rendered===0): ?>
+        <p>Sorry, we didn't find any art that matched your search criteria, please try again.</p>
+    <?php endif; ?>
 </div>
 
 <script>
