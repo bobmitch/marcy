@@ -36,7 +36,7 @@ $filters = [];
 if ($artstatus && $artstatus!=='All') {
     $filters['category'] = $artstatus;
 }
-if ($framed && $framed!=='All') {
+if (is_numeric($framed) && $framed!=2) {
     $filters['f_artframed'] = $framed;
 }
 // if we filtered at all....

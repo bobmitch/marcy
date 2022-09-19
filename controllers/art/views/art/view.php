@@ -10,7 +10,18 @@ defined('CMSPATH') or die; // prevent unauthorized access
             <h2>Work tagged &ldquo;<?=$tag->title;?>&rdquo;</h2>
         <?php else:?>
             <h1>My Work</h1>
-            <h2>Shown from newest to oldest</h2>
+            <?php if ($artstatus):?>
+                <!-- show filters --> 
+                <p>Searching for <?php echo $artstatus=="All" ? 'both available and sold' : ($artstatus==3 ? 'available' : 'unavailable');?> 
+                    work that is <?php echo $framed==2 ? 'either framed or unframed' : ($framed ? 'framed' : 'unframed');?>  
+                    with a max price of $<?=$maxprice;?>
+                    <?php if ($searchtext):?>
+                        <br>Title must also contain &ldquo;<?=$searchtext;?>&rdquo;
+                    <?php endif; ?>
+                </p>
+            <?php else: ?>
+                <h2>Shown from newest to oldest</h2>
+            <?php endif; ?>
         <?php endif; ?>
     </hgroup>
 
@@ -44,7 +55,7 @@ defined('CMSPATH') or die; // prevent unauthorized access
                         <div>
                             <label for="framed">Framed</label>
                             <select name='framed' id="framed" required>
-                                <option value="All" selected>Either</option>
+                                <option value="2" selected>Either</option>
                                 <option value="1">Framed</option>
                                 <option value="0">Unframed</option>
                             </select>
